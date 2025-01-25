@@ -1,37 +1,51 @@
-import React from 'react'
+
+import React from 'react';
 import Image from 'next/image';
 
-interface propsType {
+interface PropsType {
   title: string;
   desc: string;
   img: string;
   tags: string[];
 }
 
-const Card: React.FC<propsType> = ({ title, desc, img, tags }) => {
+const Card: React.FC<PropsType> = ({ title, desc, img, tags }) => {
   return (
-    <div className='border border-green-300 w-[300ppx] sm:w-[350px]' data-aos="zoom-in-up">
-      <div>
-        <Image className=' w-[300ppx] sm:w-[350px] h-auto'
+    <div
+      className="border border-red-300 rounded-lg w-[300px] sm:w-[350px] h-[450px] flex flex-col"
+      data-aos="zoom-in-up"
+    >
+      {/* Image Section */}
+      <div className="w-full h-[200px] relative">
+        <Image
+          className="object-cover rounded-t-lg"
           src={img}
-          width={350}
-          height={350}
+          layout="fill"
           alt={title}
         />
       </div>
-      <div className='p-4 space-y-4'>
-        <div className='text-4xl font-extralight'>{title}</div>
-        <div>{desc}</div>
-        <div>
+
+      {/* Content Section */}
+      <div className="p-4 space-y-4 flex flex-col justify-between flex-grow">
+        {/* Title */}
+        <div className="text-4xl font-extralight text-white">{title}</div>
+
+        {/* Description */}
+        <div className="text-gray-400">{desc}</div>
+
+        {/* Tags */}
+        <div className="flex flex-wrap gap-2">
           {tags.map((el) => (
-            <div className='tags' key={el} >
+            <span
+              className='tags' key={el}
+            >
               {el}
-            </div>
-            ))}
+            </span>
+          ))}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

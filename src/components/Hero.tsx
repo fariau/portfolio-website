@@ -1,15 +1,24 @@
-import React from 'react'
-import Navbar from './Navbar'
+
+import React from 'react';
+import Navbar from './Navbar';
 
 const Hero = () => {
   return (
-    <div id="hero" className='min-h-screen bg-no-repeat bg-[url(/its-me.jpg)] bg-left lg:bg-[15%] bg-cover'
-      style={{backgroundSize: "26% ", backgroundPosition: "left 100px top 100px flex justify-between " }}
+    <div
+      id="hero"
+      className="min-h-screen bg-[url('/its-me.jpg')] bg-cover flex flex-col"
+      style={{
+        backgroundSize: 'contain', // Adjust image size
+        backgroundPosition: 'center', // Center the background image
+      }}
     >
       <Navbar />
-      <div className='container grid lg:grid-cols-2 h-[cols(100vh-60px)]'>
-        <div className='hidden lg:block'></div>
-        <div className='text-[80px] sm:text-[100px] font-bold leading-tight flex justify-center items-center'>
+      <div className="container mx-auto flex flex-col justify-center items-center text-center lg:grid lg:grid-cols-2 lg:items-center lg:text-left h-full px-4">
+        {/* Empty space for spacing in larger screens */}
+        <div className="hidden lg:block"></div>
+
+        {/* Text Content */}
+        <div className="text-[40px] sm:text-[60px] lg:text-[80px] font-bold leading-tight">
           <div>
             <p data-aos="zoom-out-left">I&apos;m</p>
             <p data-aos="zoom-out-left">Faria</p>
@@ -18,7 +27,7 @@ const Hero = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
