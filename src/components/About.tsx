@@ -10,7 +10,7 @@ const About = () => {
 
       {/* Description */}
       <p className="text-gray-400 text-lg md:text-xl pt-4 leading-relaxed">
-        I'm currently a student at GIAIC, where I'm pursuing an in-depth course on Artificial Intelligence, Web 3.0, and the Metaverse. 
+        I&apos;m currently a student at GIAIC, where I&apos;m pursuing an in-depth course on Artificial Intelligence, Web 3.0, and the Metaverse. 
         With a strong interest in cutting-edge technologies, I&apos;m continuously expanding my skills in modern web development, including tools like React.js, Next.js, TypeScript, and Tailwind CSS.
         <br /><br />
         I enjoy building responsive and interactive web applications and believe in writing clean, maintainable code. 
