@@ -8,11 +8,11 @@ const Hero = () => {
         {/* Text Content */}
         <div className="w-full lg:w-1/2 text-center lg:text-left space-y-5" data-aos="fade-up">
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold leading-tight">
-            <span className="block">I'm</span>
+            <span className="block">I&apos;m</span>
             <span className="block text-red-300">Faria Usman</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-400">
-            I'm a Frontend Developer who enjoys creating clean and user-friendly websites. I'm always learning new things and love turning ideas into real, working products.
+            I&apos;m a Frontend Developer who enjoys creating clean and user-friendly websites. I&apos;m always learning new things and love turning ideas into real, working products.
           </p>
 
           {/* Buttons */}
