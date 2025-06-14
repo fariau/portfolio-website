@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -36,7 +37,7 @@ const Hero = () => {
 
         {/* Image Section */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end" data-aos="fade-left">
-          <img
+          <Image
             src="/its-me.jpg"
             alt="Faria Usman"
             className="w-[150px] sm:w-[250px] lg:w-[280px] rounded-xl shadow-lg object-cover"
