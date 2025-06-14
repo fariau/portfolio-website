@@ -1,32 +1,54 @@
-
-import { AiOutlineMail } from "react-icons/ai";
+import { AiOutlineMail, AiFillLinkedin } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
 
 const Contact = () => {
   return (
     <div id="contact" className="pt-20 md:pt-32 container px-4">
-      <div className="grid md:grid-cols-2 gap-10 items-start">
+      <div className="grid md:grid-cols-2 gap-12 items-start">
         {/* Left Section */}
         <div className="space-y-6">
-          <h2 className="text-4xl md:text-5xl font-semibold" data-aos="zoom-in-up">
+          <h2 className="text-4xl md:text-5xl font-semibold text-white" data-aos="zoom-in-up">
             Get in Touch
           </h2>
           <p className="text-gray-400 text-lg">
-            Drop me a line, give me a call, or send me a message by submitting the form below.
+            Have a question or want to work together? Send me a message and I'll get back to you shortly.
           </p>
-          <div className="flex items-center gap-3 text-gray-400">
-            <AiOutlineMail size={30} className="text-red-300" />
-            <span>fariausman@gmail.com</span>
+
+          {/* Email */}
+          <div className="flex items-center gap-3 text-gray-300">
+            <AiOutlineMail size={28} className="text-red-300" />
+            <a
+              href="mailto:fariausman17@gmail.com"
+              className="text-gray-300 hover:text-red-300"
+            >
+              fariausman17@gmail.com
+            </a>
           </div>
-          <div className="flex items-center gap-3 text-gray-400">
-            <BsTelephone size={30} className="text-red-300" />
+
+
+          {/* Phone */}
+          <div className="flex items-center gap-3 text-gray-300">
+            <BsTelephone size={24} className="text-red-300" />
             <span>(021) 123456789</span>
+          </div>
+
+          {/* LinkedIn */}
+          <div className="flex items-center gap-3 text-gray-300">
+            <AiFillLinkedin size={28} className="text-red-300" />
+            <a
+              href="https://www.linkedin.com/in/faria-usman-856415309"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=" text-gray-300 hover:text-red-300"
+            >
+              faria-usman
+            </a>
           </div>
         </div>
 
         {/* Right Section */}
-        <div className="space-y-6">
-          {/* Name Input */}
+        <form className="space-y-6 w-full">
+          {/* Name */}
           <div className="flex flex-col gap-2">
             <label htmlFor="name" className="text-gray-400">
               Name
@@ -34,11 +56,12 @@ const Contact = () => {
             <input
               type="text"
               id="name"
-              className="h-[40px] bg-transparent border border-red-300 rounded px-2 focus:outline-none focus:ring focus:ring-red-300"
+              placeholder="Enter your name"
+              className="h-[45px] bg-transparent border border-red-300 rounded px-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-400"
             />
           </div>
 
-          {/* Email Input */}
+          {/* Email */}
           <div className="flex flex-col gap-2">
             <label htmlFor="email" className="text-gray-400">
               Email
@@ -46,11 +69,12 @@ const Contact = () => {
             <input
               type="email"
               id="email"
-              className="h-[40px] bg-transparent border border-red-300 rounded px-2 focus:outline-none focus:ring focus:ring-red-300"
+              placeholder="Enter your email"
+              className="h-[45px] bg-transparent border border-red-300 rounded px-3 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-400"
             />
           </div>
 
-          {/* Message Input */}
+          {/* Message */}
           <div className="flex flex-col gap-2">
             <label htmlFor="message" className="text-gray-400">
               Message
@@ -58,15 +82,19 @@ const Contact = () => {
             <textarea
               id="message"
               rows={6}
-              className="bg-transparent border border-red-300 rounded px-2 py-1 focus:outline-none focus:ring focus:ring-red-300"
+              placeholder="Type your message here..."
+              className="bg-transparent border border-red-300 rounded px-3 py-2 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-400"
             />
           </div>
 
           {/* Submit Button */}
-          <button className="bg-red-300 text-white py-2 px-6 rounded hover:bg-red-600 transition-all duration-300">
-            Send
+          <button
+            type="submit"
+            className="bg-red-300 text-white py-2 px-6 rounded hover:bg-red-500 transition-all duration-300"
+          >
+            Send Message
           </button>
-        </div>
+        </form>
       </div>
     </div>
   );
