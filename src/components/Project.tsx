@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { link } from 'fs';
 
 interface CardProps {
   title: string;
