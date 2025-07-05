@@ -40,6 +40,8 @@ const Hero = () => {
           <Image
             src="/its-me.jpg"
             alt="Faria Usman"
+            width={150}
+            height={150}
             className="w-[150px] sm:w-[250px] lg:w-[280px] rounded-xl shadow-lg object-cover"
           />
         </div>
