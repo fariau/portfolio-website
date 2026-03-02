@@ -13,7 +13,7 @@ const Hero = () => {
           {/* Left - Text Content */}
           <div className="w-full lg:w-3/5 text-center lg:text-left space-y-6 md:space-y-8" data-aos="fade-up">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-tight">
-              <span className="block text-gray-50">Hi, I'm</span>
+              <span className="block text-gray-50">Hi, I&apos;m</span>
               <span className="block text-[#f4a261] mt-1 md:mt-2">Faria Usman</span>
             </h1>
 
