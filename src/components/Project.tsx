@@ -10,7 +10,7 @@ interface ProjectType {
   title: string;
   img: string;
   link?: string;
-  category: "nextjs" | "html-css" | "python" | "typescript";
+  category: "nextjs" | "html-css" | "python" | "typescript" | "cli";
 }
 
 const projects: ProjectType[] = [
@@ -35,19 +35,39 @@ const projects: ProjectType[] = [
   { id: 18, title: "Audio Player App", img: "/project-18.png", link: "https://audio-player-app-two.vercel.app/", category: "nextjs" },
   { id: 19, title: "Random User Generator", img: "/project-19.png", link: "https://random-user-generator-app-gamma.vercel.app/", category: "nextjs" },
   { id: 20, title: "Todo List", img: "/project-20.png", link: "https://todo-list-app-with-next-js.vercel.app/", category: "nextjs" },
-  { id: 21, title: "URL Shortenert", img: "/project-21.png", link: "https://url-shortener-app-beryl.vercel.app/", category: "nextjs" },
+  { id: 21, title: "URL Shortener", img: "/project-21.png", link: "https://url-shortener-app-beryl.vercel.app/", category: "nextjs" },
   { id: 22, title: "Snake Game", img: "/project-22.png", link: "https://snake-game-drab-two.vercel.app/", category: "nextjs" },
   { id: 23, title: "Stop Watch", img: "/project-23.png", link: "https://stop-watch-app-kappa.vercel.app/", category: "nextjs" },
-  { id: 24, title: "Quiz-App", img: "/project-24.png", link: "https://quiz-app-nextjs-six.vercel.app/", category: "nextjs" },
+  { id: 24, title: "Quiz App", img: "/project-24.png", link: "https://quiz-app-nextjs-six.vercel.app/", category: "nextjs" },
   { id: 25, title: "Image Slider", img: "/project-25.png", link: "https://image-slider-app-three.vercel.app/", category: "nextjs" },
-  { id: 26, title: "Word-Counter", img: "/project-26.png", link: "https://word-counter-app-kappa-black.vercel.app/", category: "nextjs" },
+  { id: 26, title: "Word Counter", img: "/project-26.png", link: "https://word-counter-app-kappa-black.vercel.app/", category: "nextjs" },
   { id: 27, title: "Recipe Search", img: "/project-27.png", link: "https://recipe-search-app-bice.vercel.app/", category: "nextjs" },
-  { id: 28, title: "Notes-App", img: "/project-28.png", link: "https://notes-app-inky-mu-39.vercel.app/", category: "nextjs" },
+  { id: 28, title: "Notes App", img: "/project-28.png", link: "https://notes-app-inky-mu-39.vercel.app/", category: "nextjs" },
   { id: 29, title: "GitHub Profile Viewer", img: "/project-29.png", link: "https://github-profile-viewer-amber-chi.vercel.app/", category: "nextjs" },
   { id: 30, title: "Currency Converter", img: "/project-30.png", link: "https://currency-converter-app-sand.vercel.app/", category: "nextjs" },
   { id: 31, title: "Meme Generator", img: "/project-31.png", link: "https://meme-generator-cyan-one.vercel.app/", category: "nextjs" },
   { id: 32, title: "Movie Search App", img: "/project-32.png", link: "https://movie-search-app-murex-six.vercel.app/", category: "nextjs" },
-
+  { id: 33, title: "Expense Tracker", img: "/project-33.png", link: "https://expense-tracker-zeta-rose-36.vercel.app/", category: "nextjs" },
+  { id: 34, title: "Pomodoro Timer", img: "/project-34.png", link: "https://pomodoro-timer-nine-ivory.vercel.app/", category: "nextjs" },
+  { id: 35, title: "HTML Previewer", img: "/project-35.png", link: "https://html-previewer-three.vercel.app/", category: "nextjs" },
+  { id: 36, title: "Unit Converter", img: "/project-36.png", link: "https://unit-converter-tan-chi.vercel.app/", category: "nextjs" },
+  { id: 37, title: "BMI Calculator", img: "/project-37.png", link: "https://bmi-calculator-app-xi.vercel.app/", category: "nextjs" },
+  { id: 38, title: "Password Generator", img: "/project-38.png", link: "https://password-generator-opal-one.vercel.app/", category: "nextjs" },
+  { id: 39, title: "Tip Calculator", img: "/project-39.png", link: "https://tip-calculator-app-pied-mu.vercel.app/", category: "nextjs" },
+  { id: 40, title: "Color Picker", img: "/project-40.png", link: "https://color-picker-eight-self.vercel.app/", category: "nextjs" },
+  { id: 41, title: "Random Joke", img: "/project-41.png", link: "https://random-joke-generator-pi-six.vercel.app/", category: "nextjs" },
+  { id: 42, title: "Digital Clock", img: "/project-42.png", link: "https://digital-clock-sandy-phi.vercel.app/", category: "nextjs" },
+  { id: 43, title: "Simple Calculator", img: "/project-43.png", link: "https://simple-calculator-app-orcin.vercel.app/", category: "nextjs" },
+  { id: 44, title: "Birthday Wish", img: "/project-44.png", link: "https://birthday-wish-app-sage.vercel.app/", category: "nextjs" },
+  { id: 45, title: "Number Guessing", img: "/project-45.png", link: "https://number-guess-game-rust.vercel.app/", category: "nextjs" },
+  { id: 46, title: "Weather Widget", img: "/project-46.png", link: "https://weather-widget-lake.vercel.app/", category: "nextjs" },
+  { id: 47, title: "Todo App CLI", img: "/project-47.png", link: "https://todo-app-hackathon-alpha.vercel.app/auth/login", category: "cli" },
+  { id: 48, title: "Birthday Card CLI", img: "/project-48.png", link: "https://birthday-card-livid-phi.vercel.app/", category: "cli" },
+  { id: 49, title: "Modern Calendar CLI", img: "/project-49.png", link: "https://modern-calendar-blond.vercel.app/", category: "cli" },
+  { id: 50, title: "CLI Calculator", img: "/project-50.png", link: "https://gemini-cli-ui-calculator-l9mf.vercel.app/", category: "cli" },
+  { id: 51, title: "Physical AI & Humanoid Robotics Textbook", img: "/project-51.png", link: "https://physical-ai-humanoid-robotics-book-beige.vercel.app/", category: "cli" },
+  { id: 52, title: "Custom Portfolio", img: "/project-52.png", link: "https://custom-portfolio-xi.vercel.app/", category: "html-css" },
+  { id: 53, title: "Humanoid Robotic Book", img: "/project-53.png", link: "https://fariau.github.io/Humanoid-Robotic-Book/", category: "cli" },
 ];
 
 const StackedSection = ({ 
@@ -85,7 +105,7 @@ const StackedSection = ({
   }, [categoryProjects]);
 
   return (
-    <div className="mb-9 w-full">   {/* Tight margin */}
+    <div className="mb-9 w-full">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -158,6 +178,7 @@ export default function Project() {
   const typescriptProjects = projects.filter(p => p.category === "typescript");
   const htmlCssProjects    = projects.filter(p => p.category === "html-css");
   const pythonProjects     = projects.filter(p => p.category === "python");
+  const cliProjects        = projects.filter(p => p.category === "cli");
 
   return (
     <section
@@ -182,14 +203,16 @@ export default function Project() {
         </h1>
       </motion.div>
 
-      {/* All Category Sections */}
+      {/* Category Sections */}
       <StackedSection title="Next.js Web Projects" categoryProjects={nextjsProjects} />
+      <StackedSection title="Python & Streamlit Projects" categoryProjects={pythonProjects} />
+      <StackedSection title="Docusaurus & CLI Projects" categoryProjects={cliProjects} />
       <StackedSection title="TypeScript Projects" categoryProjects={typescriptProjects} />
-      <StackedSection title="HTML & CSS Static Websites" categoryProjects={htmlCssProjects} />
-      <StackedSection title="Python & Streamlit Applications" categoryProjects={pythonProjects} />
+      <StackedSection title="HTML & CSS Projects" categoryProjects={htmlCssProjects} />
+      
 
-      {/* Single View All Button at the very bottom with minimal gap */}
-      <div className="flex justify-center mt-8">
+      {/* Single View All Button */}
+      <div className="flex justify-center mt-10">
         <button
           onClick={() => setIsModalOpen(true)}
           className="px-10 py-4 border-2 border-[#f4a261] text-[#f4a261] hover:bg-[#f4a261] hover:text-white 
