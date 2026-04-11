@@ -3,15 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-  body{
-      color: #fff;
-      background-color: #000;
+@layer base {
+  html,
+  body {
+    color: #fff;
+    background-color: #2d1b3f; 
+    overflow-x: hidden;  
   }
 }
-@layer components{
-  .menuLink{
-      @apply cursor-pointer hover:text-[#c5c5c5];
+
+@layer components {
+  .menuLink {
+    @apply cursor-pointer hover:text-[#c5c5c5];
   }
   .tags{
       background-color: #0abde3;
