@@ -1,150 +1,158 @@
+"use client";
+
 import React from 'react';
 import { AiOutlineMail, AiFillLinkedin } from "react-icons/ai";
 import { BsTelephone } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section 
-      id="contact" 
-      className="w-full bg-[#2d1b3f] pt-24 md:pt-32 pb-16 md:pb-24"
+    <section
+      id="contact"
+      className="w-full bg-zinc-950 pt-24 md:pt-32 pb-20 md:pb-28"
     >
       <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start">
+
           {/* Left - Contact Info */}
-          <div className="space-y-8">
-            <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#f8f1f1] tracking-tight"
-              data-aos="fade-up"
-              data-aos-duration="800"
-            >
-              Get in <span style={{ color: '#f4a261' }}>Touch</span>
+          <motion.div
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9 }}
+            className="space-y-8"
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-100 tracking-tighter">
+              Get in <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Touch</span>
             </h2>
 
-            <p 
-              className="text-[#e0d9d9] text-lg md:text-xl leading-relaxed"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
+            <p className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-md">
               Have a question, project idea, or just want to connect?  
-              Feel free to reach out — I will respond as soon as possible.
+              I&apos;m always open to new opportunities and conversations.
             </p>
 
-            <div className="space-y-7 mt-8">
+            <div className="space-y-8 mt-10">
               {/* Email */}
-              <div 
-                className="flex items-center gap-4 text-[#e0d9d9] group"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div className="p-3 bg-[#1e1430]/60 rounded-lg group-hover:bg-[#1e1430]/80 transition-colors duration-200">
-                  <AiOutlineMail size={26} style={{ color: '#f4a261' }} />
+              <div className="flex items-start gap-5 group">
+                <div className="p-4 bg-zinc-900 rounded-2xl border border-zinc-700 group-hover:border-violet-500 transition-all duration-300">
+                  <AiOutlineMail size={28} className="text-violet-400" />
                 </div>
-                <a
-                  href="mailto:fariausman17@gmail.com"
-                  className="text-[#e0d9d9] hover:text-[#f4a261] transition-colors duration-200 text-lg"
-                >
-                  fariausman17@gmail.com
-                </a>
+                <div>
+                  <p className="text-zinc-500 text-sm font-medium mb-1">Email</p>
+                  <a
+                    href="mailto:fariausman17@gmail.com"
+                    className="text-zinc-300 hover:text-violet-400 text-lg transition-colors duration-200 block"
+                  >
+                    fariausman17@gmail.com
+                  </a>
+                </div>
               </div>
 
               {/* Phone */}
-              <div 
-                className="flex items-center gap-4 text-[#e0d9d9] group"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <div className="p-3 bg-[#1e1430]/60 rounded-lg group-hover:bg-[#1e1430]/80 transition-colors duration-200">
-                  <BsTelephone size={26} style={{ color: '#f4a261' }} />
+              <div className="flex items-start gap-5 group">
+                <div className="p-4 bg-zinc-900 rounded-2xl border border-zinc-700 group-hover:border-violet-500 transition-all duration-300">
+                  <BsTelephone size={28} className="text-violet-400" />
                 </div>
-                <span className="text-[#e0d9d9] text-lg">(021) 123456789</span>
+                <div>
+                  <p className="text-zinc-500 text-sm font-medium mb-1">Phone</p>
+                  <span className="text-zinc-300 text-lg">
+                    +92 300 1234567
+                  </span>
+                </div>
               </div>
 
               {/* LinkedIn */}
-              <div 
-                className="flex items-center gap-4 text-[#e0d9d9] group"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <div className="p-3 bg-[#1e1430]/60 rounded-lg group-hover:bg-[#1e1430]/80 transition-colors duration-200">
-                  <AiFillLinkedin size={26} style={{ color: '#f4a261' }} />
+              <div className="flex items-start gap-5 group">
+                <div className="p-4 bg-zinc-900 rounded-2xl border border-zinc-700 group-hover:border-violet-500 transition-all duration-300">
+                  <AiFillLinkedin size={28} className="text-violet-400" />
                 </div>
-                <a
-                  href="https://www.linkedin.com/in/faria-usman-856415309"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#e0d9d9] hover:text-[#f4a261] transition-colors duration-200 text-lg"
-                >
-                  linkedin.com/in/faria-usman
-                </a>
+                <div>
+                  <p className="text-zinc-500 text-sm font-medium mb-1">LinkedIn</p>
+                  <a
+                    href="https://www.linkedin.com/in/faria-usman-856415309"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-zinc-300 hover:text-violet-400 text-lg transition-colors duration-200 block"
+                  >
+                    linkedin.com/in/faria-usman
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Right - Contact Form */}
-          <form 
-            className="space-y-6 w-full"
-            data-aos="fade-up"
-            data-aos-delay="200"
+          {/* Right - Contact Form (Compact Height) */}
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9 }}
           >
-            {/* Name */}
-            <div className="space-y-2">
-              <label htmlFor="name" className="block text-[#c7b3e6] text-sm font-medium">
-                Full Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Your name"
-                className="w-full h-12 bg-[#1e1430]/80 border border-[#c7b3e6]/30 rounded-lg px-4 text-[#f8f1f1] 
-                           placeholder-[#c7b3e6]/60 focus:outline-none focus:border-[#f4a261]/60 
-                           focus:ring-1 focus:ring-[#f4a261]/30 transition-all duration-200"
-                required
-              />
-            </div>
+            <form className="space-y-6 w-full bg-zinc-900 border border-zinc-800 rounded-3xl p-8 md:p-10">
 
-            {/* Email */}
-            <div className="space-y-2">
-              <label htmlFor="email" className="block text-[#c7b3e6] text-sm font-medium">
-                Email Address
-              </label>
-              <input
-                type="email"
-                id="email"
-                placeholder="your.email@example.com"
-                className="w-full h-12 bg-[#1e1430]/80 border border-[#c7b3e6]/30 rounded-lg px-4 text-[#f8f1f1] 
-                           placeholder-[#c7b3e6]/60 focus:outline-none focus:border-[#f4a261]/60 
-                           focus:ring-1 focus:ring-[#f4a261]/30 transition-all duration-200"
-                required
-              />
-            </div>
+              {/* Name */}
+              <div className="space-y-2">
+                <label htmlFor="name" className="block text-zinc-400 text-sm font-medium">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Your full name"
+                  className="w-full h-12 bg-zinc-950 border border-zinc-700 rounded-2xl px-5 text-zinc-100 
+                             placeholder-zinc-500 focus:outline-none focus:border-violet-500 
+                             focus:ring-1 focus:ring-violet-500/30 transition-all duration-300"
+                  required
+                />
+              </div>
 
-            {/* Message */}
-            <div className="space-y-2">
-              <label htmlFor="message" className="block text-[#c7b3e6] text-sm font-medium">
-                Message
-              </label>
-              <textarea
-                id="message"
-                rows={6}
-                placeholder="How can I help you today?"
-                className="w-full bg-[#1e1430]/80 border border-[#c7b3e6]/30 rounded-lg px-4 py-3 text-[#f8f1f1] 
-                           placeholder-[#c7b3e6]/60 focus:outline-none focus:border-[#f4a261]/60 
-                           focus:ring-1 focus:ring-[#f4a261]/30 transition-all duration-200 resize-none"
-                required
-              />
-            </div>
+              {/* Email */}
+              <div className="space-y-2">
+                <label htmlFor="email" className="block text-zinc-400 text-sm font-medium">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="your.email@example.com"
+                  className="w-full h-12 bg-zinc-950 border border-zinc-700 rounded-2xl px-5 text-zinc-100 
+                             placeholder-zinc-500 focus:outline-none focus:border-violet-500 
+                             focus:ring-1 focus:ring-violet-500/30 transition-all duration-300"
+                  required
+                />
+              </div>
 
-            {/* Submit Button */}
-            <button
-              type="submit"
-              className="w-full sm:w-auto bg-[#f4a261] hover:bg-[#ff9f80] text-[#1e1430] font-medium 
-                         py-3 px-8 rounded-lg transition-all duration-300 shadow-md 
-                         hover:shadow-[#f4a261]/30 focus:outline-none focus:ring-2 
-                         focus:ring-[#f4a261]/40 focus:ring-offset-2 focus:ring-offset-[#2d1b3f]"
-            >
-              Send Message
-            </button>
-          </form>
+              {/* Message - Reduced Height */}
+              <div className="space-y-2">
+                <label htmlFor="message" className="block text-zinc-400 text-sm font-medium">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={3} 
+                  placeholder="How can I help you today? Feel free to share your project idea..."
+                  className="w-full bg-zinc-950 border border-zinc-700 rounded-3xl px-5 py-4 text-zinc-100 
+                             placeholder-zinc-500 focus:outline-none focus:border-violet-500 
+                             focus:ring-1 focus:ring-violet-500/30 transition-all duration-300 resize-none"
+                  required
+                />
+              </div>
+
+              {/* Submit Button - Gradient Style */}
+              <button
+                type="submit"
+                className="w-full mt-6 group px-10 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 
+                           hover:from-violet-500 hover:to-fuchsia-500 
+                           active:from-violet-700 active:to-fuchsia-700
+                           text-white font-semibold text-lg rounded-2xl 
+                           transition-all duration-300 flex items-center justify-center gap-3 
+                           shadow-lg shadow-violet-500/40 hover:shadow-2xl hover:shadow-violet-500/50 
+                           border border-violet-400/20 hover:border-violet-400/40 tracking-wide"
+              >
+                Send Message
+                <span className="transition-transform group-hover:translate-x-1">→</span>
+              </button>
+            </form>
+          </motion.div>
+
         </div>
       </div>
     </section>

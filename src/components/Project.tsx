@@ -70,12 +70,12 @@ const projects: ProjectType[] = [
   { id: 53, title: "Humanoid Robotic Book", img: "/project-53.png", link: "https://fariau.github.io/Humanoid-Robotic-Book/", category: "cli" },
 ];
 
-const StackedSection = ({ 
-  title, 
-  categoryProjects 
-}: { 
-  title: string; 
-  categoryProjects: ProjectType[]; 
+const StackedSection = ({
+  title,
+  categoryProjects
+}: {
+  title: string;
+  categoryProjects: ProjectType[];
 }) => {
   const [stack, setStack] = useState<ProjectType[]>(categoryProjects);
   const [positions, setPositions] = useState<{ x: number; y: number; rotate: number }[]>(
@@ -105,21 +105,21 @@ const StackedSection = ({
   }, [categoryProjects]);
 
   return (
-    <div className="mb-9 w-full">
+    <div className="mb-12 w-full">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-3xl md:text-4xl font-bold text-center text-[#f8f1f1] tracking-tight mb-5"
+        className="text-3xl md:text-4xl font-bold text-center text-zinc-100 tracking-tight mb-8"
       >
         {title}
       </motion.h2>
 
-      <div className="relative w-full max-w-4xl lg:max-w-5xl aspect-[4/3] sm:aspect-[16/10] md:aspect-video mx-auto flex items-center justify-center mb-6">
+      <div className="relative w-full max-w-4xl lg:max-w-5xl aspect-[4/3] sm:aspect-[16/10] md:aspect-video mx-auto flex items-center justify-center">
         {stack.map((project, index) => (
           <motion.div
             key={project.id}
-            className="absolute w-[58%] sm:w-[54%] md:w-[50%] lg:w-[46%] aspect-[4/3] sm:aspect-[16/10] md:aspect-video rounded-2xl overflow-hidden border border-[#c7b3e6]/20 shadow-xl bg-[#2d1b3f] backdrop-blur-md"
+            className="absolute w-[58%] sm:w-[54%] md:w-[50%] lg:w-[46%] aspect-[4/3] sm:aspect-[16/10] md:aspect-video rounded-3xl overflow-hidden border border-zinc-700 shadow-2xl bg-zinc-900"
             style={{ zIndex: stack.length - index }}
             animate={{
               x: positions[index]?.x ?? 0,
@@ -128,11 +128,11 @@ const StackedSection = ({
             }}
             transition={{ duration: 1.8, ease: "easeInOut" }}
             whileHover={{
-              scale: 1.05,
+              scale: 1.06,
               rotate: 0,
               x: 0,
-              y: -18,
-              boxShadow: "0 0 35px rgba(244, 162, 97, 0.25)",
+              y: -20,
+              boxShadow: "0 0 40px rgba(139, 92, 246, 0.3)",
             }}
           >
             <div className="relative w-full h-full">
@@ -145,10 +145,10 @@ const StackedSection = ({
                 priority={index < 2}
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent" />
 
-              <div className="absolute inset-0 p-4 flex flex-col justify-end text-[#e0d9d9]">
-                <h3 className="text-base sm:text-lg font-semibold mb-2 tracking-tight">
+              <div className="absolute inset-0 p-5 sm:p-6 flex flex-col justify-end">
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 tracking-tight">
                   {project.title}
                 </h3>
 
@@ -157,9 +157,9 @@ const StackedSection = ({
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#f4a261] hover:text-[#ff9f80] font-medium text-sm transition-colors inline-flex items-center gap-2"
+                    className="text-violet-400 hover:text-violet-300 font-medium text-sm flex items-center gap-2 transition-colors"
                   >
-                    View Project <span aria-hidden="true">→</span>
+                    View Live Project <span aria-hidden="true">→</span>
                   </a>
                 )}
               </div>
@@ -174,21 +174,21 @@ const StackedSection = ({
 export default function Project() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const nextjsProjects     = projects.filter(p => p.category === "nextjs");
+  const nextjsProjects = projects.filter(p => p.category === "nextjs");
   const typescriptProjects = projects.filter(p => p.category === "typescript");
-  const htmlCssProjects    = projects.filter(p => p.category === "html-css");
-  const pythonProjects     = projects.filter(p => p.category === "python");
-  const cliProjects        = projects.filter(p => p.category === "cli");
+  const htmlCssProjects = projects.filter(p => p.category === "html-css");
+  const pythonProjects = projects.filter(p => p.category === "python");
+  const cliProjects = projects.filter(p => p.category === "cli");
 
   return (
     <section
       id="project"
-      className="relative overflow-hidden bg-[#2d1b3f] py-12 md:py-16 lg:py-20 px-5 md:px-8 lg:px-12"
+      className="relative overflow-hidden bg-zinc-950 py-16 md:py-20 lg:py-24 px-5 md:px-8 lg:px-12"
     >
-      {/* Background Glows */}
+      {/* Subtle Background Glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-1/4 top-1/4 w-[600px] h-[600px] bg-[#f4a261]/22 rounded-full blur-[140px]" />
-        <div className="absolute right-1/4 bottom-1/4 w-[550px] h-[550px] bg-[#f4a261]/18 rounded-full blur-[130px]" />
+        <div className="absolute left-1/4 top-1/4 w-[700px] h-[700px] bg-violet-500/10 rounded-full blur-[140px]" />
+        <div className="absolute right-1/4 bottom-1/4 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full blur-[130px]" />
       </div>
 
       {/* Main Heading */}
@@ -196,28 +196,35 @@ export default function Project() {
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9 }}
-        className="text-center mb-10 relative z-10"
+        className="text-center mb-14 relative z-10"
       >
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#f8f1f1] tracking-tight">
-          My <span style={{ color: '#f4a261' }}>Projects</span>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-zinc-100 tracking-tighter">
+          My <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Projects</span>
         </h1>
+        <p className="mt-4 text-zinc-400 text-lg max-w-2xl mx-auto">
+          A collection of web applications, tools, and experiments built with modern technologies
+        </p>
       </motion.div>
 
-      {/* Category Sections */}
+      {/* Category Stacked Sections */}
       <StackedSection title="Next.js Web Projects" categoryProjects={nextjsProjects} />
       <StackedSection title="Python & Streamlit Projects" categoryProjects={pythonProjects} />
-      <StackedSection title="Docusaurus & CLI Projects" categoryProjects={cliProjects} />
-      <StackedSection title="TypeScript Projects" categoryProjects={typescriptProjects} />
       <StackedSection title="HTML & CSS Projects" categoryProjects={htmlCssProjects} />
-      
+      <StackedSection title="CLI & Other Tools" categoryProjects={cliProjects} />
+      <StackedSection title="TypeScript Projects" categoryProjects={typescriptProjects} />
 
-      {/* Single View All Button */}
-      <div className="flex justify-center mt-10">
+
+      {/* View All Projects Button */}
+      <div className="flex justify-center mt-16">
         <button
           onClick={() => setIsModalOpen(true)}
-          className="px-10 py-4 border-2 border-[#f4a261] text-[#f4a261] hover:bg-[#f4a261] hover:text-white 
-                     rounded-2xl font-medium text-lg transition-all duration-300 
-                     flex items-center gap-3 hover:shadow-[0_0_25px_rgba(244,162,97,0.4)]"
+          className="group px-10 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 
+             hover:from-violet-500 hover:to-fuchsia-500 
+             active:from-violet-700 active:to-fuchsia-700
+             text-white font-semibold text-lg rounded-2xl 
+             transition-all duration-300 flex items-center gap-3 
+             shadow-lg shadow-violet-500/40 hover:shadow-2xl hover:shadow-violet-500/50 
+             border border-violet-400/20 hover:border-violet-400/40"
         >
           View All Projects
           <span className="transition-transform group-hover:translate-x-1">→</span>
@@ -225,10 +232,10 @@ export default function Project() {
       </div>
 
       {/* All Projects Modal */}
-      <AllProjectsModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
-        allProjects={projects} 
+      <AllProjectsModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        allProjects={projects}
       />
     </section>
   );

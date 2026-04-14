@@ -1,67 +1,95 @@
+"use client";
+
 import React from 'react';
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <section 
       id="about" 
-      className="w-full bg-[#2d1b3f] pt-24 md:pt-32 pb-16 md:pb-24"
+      className="w-full bg-zinc-950 pt-24 md:pt-32 pb-20 md:pb-28"
     >
       <div className="max-w-4xl mx-auto px-5 sm:px-8 lg:px-12">
+        
         {/* Heading */}
-        <div className="relative mb-10 md:mb-14">
-          <h2 
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#f8f1f1] tracking-tight"
-            data-aos="fade-up"
-            data-aos-duration="800"
+        <div className="relative mb-12 md:mb-16">
+          <motion.h2 
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-100 tracking-tighter"
           >
-            About <span style={{ color: '#f4a261' }}>Me</span>
-          </h2>
-          <div 
-            className="absolute -bottom-3 left-0 w-20 h-1 bg-[#f4a261]/50 rounded-full"
-            data-aos="fade-right"
-            data-aos-delay="400"
-            data-aos-duration="1000"
+            About <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Me</span>
+          </motion.h2>
+          
+          <motion.div 
+            initial={{ width: 0 }}
+            whileInView={{ width: "80px" }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="absolute -bottom-3 left-0 h-1 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full"
           />
         </div>
 
-        {/* Main content */}
-        <div className="space-y-6 md:space-y-8 text-[#e0d9d9] text-base md:text-lg leading-relaxed">
-          <p data-aos="fade-up" data-aos-delay="100">
-            I am currently enrolled at the <span className="text-[#f8f1f1] font-medium">Governor Initiative for Artificial Intelligence and Computing (GIAIC)</span>, 
-            pursuing an advanced program in <span style={{ color: '#f4a261' }}>Artificial Intelligence</span>, 
-            <span style={{ color: '#f4a261' }}> Web 3.0</span>, and the <span style={{ color: '#f4a261' }}>Metaverse</span>.
-          </p>
-
-          <p data-aos="fade-up" data-aos-delay="200">
-            My primary focus lies in modern frontend and full-stack web development. I regularly work with 
-            <span style={{ color: '#f4a261', fontWeight: 500 }}> React.js</span>, 
-            <span style={{ color: '#f4a261', fontWeight: 500 }}> Next.js</span>, 
-            <span style={{ color: '#f4a261', fontWeight: 500 }}> TypeScript</span>, and 
-            <span style={{ color: '#f4a261', fontWeight: 500 }}> Tailwind CSS</span> to build responsive, performant, 
-            and user-centric applications.
-          </p>
-
-          <p data-aos="fade-up" data-aos-delay="300">
-            I place strong emphasis on clean architecture, maintainable code, and thoughtful user experience design. 
-            My long-term goal is to become a capable full-stack developer who can deliver meaningful solutions 
-            to real-world problems.
-          </p>
-
-          <p data-aos="fade-up" data-aos-delay="400">
-            In addition to web technologies, I actively use <span className="text-[#f8f1f1]">Python</span> for scripting, 
-            automation, data processing, and small utility applications. I also utilize productivity tools 
-            such as the Microsoft Office suite for documentation, planning, and professional communication.
-          </p>
-
-          <p 
-            className="pt-4 text-[#c7b3e6] italic"
-            data-aos="fade-up" 
-            data-aos-delay="500"
+        {/* Main Content */}
+        <div className="space-y-7 text-zinc-400 text-[17px] md:text-lg leading-relaxed">
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
           >
-            I remain committed to continuous learning and maintain strong enthusiasm for emerging technologies 
-            and evolving best practices in software development.
-          </p>
+            I am currently enrolled in the prestigious <span className="text-zinc-200 font-medium">Governor Initiative for Artificial Intelligence and Computing (GIAIC)</span>, 
+            where I am pursuing an advanced program specializing in 
+            <span className="text-violet-300 font-medium"> Artificial Intelligence</span>, 
+            <span className="text-violet-300 font-medium"> Web 3.0</span>, and the 
+            <span className="text-violet-300 font-medium"> Metaverse</span>.
+          </motion.p>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+          >
+            My primary passion lies in modern frontend and full-stack web development. I build responsive, 
+            high-performance, and user-centric applications using 
+            <span className="text-violet-300 font-medium"> React.js</span>, 
+            <span className="text-violet-300 font-medium"> Next.js</span>, 
+            <span className="text-violet-300 font-medium"> TypeScript</span>, and 
+            <span className="text-violet-300 font-medium"> Tailwind CSS</span>.
+          </motion.p>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3 }}
+          >
+            I strongly believe in writing clean, maintainable code with thoughtful user experience design. 
+            My goal is to evolve into a proficient full-stack developer capable of delivering impactful 
+            digital solutions to real-world problems.
+          </motion.p>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+          >
+            In addition to web technologies, I actively use 
+            <span className="text-violet-300 font-medium"> Python</span> for scripting, automation, 
+            data processing, and building small utility tools. I am also proficient with Microsoft Office 
+            tools for professional documentation, planning, and communication.
+          </motion.p>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="pt-6 text-zinc-500 italic border-l-4 border-violet-500 pl-5"
+          >
+            I am a dedicated lifelong learner with strong enthusiasm for emerging technologies and 
+            continuously improving my craft to deliver high-quality, efficient solutions.
+          </motion.p>
         </div>
+
       </div>
     </section>
   );
