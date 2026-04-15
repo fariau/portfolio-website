@@ -14,7 +14,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 30); // Changed threshold for better feel
+      setIsScrolled(window.scrollY > 30);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -77,19 +77,19 @@ const Header = () => {
         </button>
       </nav>
 
-      {/* Mobile Navigation Menu */}
+      {/* ==================== MOBILE MENU  ==================== */}
       <div
-        className={`md:hidden fixed inset-0 bg-black/80 backdrop-blur-sm transition-all duration-300 z-50 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+        className={`md:hidden fixed inset-0 bg-black/95 backdrop-blur-lg transition-all duration-300 z-[60] ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
           }`}
         onClick={toggleMenu}
       >
         <div
-          className={`absolute top-0 right-0 w-4/5 max-w-sm h-full bg-zinc-900 shadow-2xl transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          className={`absolute top-0 right-0 w-4/5 max-w-sm h-full bg-zinc-950 shadow-2xl transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Mobile Menu Header */}
-          <div className="flex justify-between items-center p-6 border-b border-zinc-700">
+          <div className="flex justify-between items-center p-6 border-b border-zinc-700 bg-zinc-900">
             <div className="flex items-center gap-1">
               <span className="text-xl font-bold text-white">Faria</span>
               <span className="text-xl font-bold bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
@@ -99,7 +99,7 @@ const Header = () => {
 
             <button
               onClick={toggleMenu}
-              className="text-zinc-400 hover:text-violet-400 transition-colors"
+              className="text-zinc-400 hover:text-violet-400 transition-colors p-2 hover:bg-zinc-800 rounded-xl"
               aria-label="Close menu"
             >
               <AiOutlineClose size={28} />
@@ -107,13 +107,13 @@ const Header = () => {
           </div>
 
           {/* Navigation Links */}
-          <ul className="flex flex-col p-6 space-y-6 text-lg text-zinc-200">
+          <ul className="flex flex-col p-6 space-y-3 text-lg text-zinc-200 bg-zinc-900">
             {navItems.map((item) => (
               <li key={item.name}>
                 <a
                   href={item.href}
                   onClick={toggleMenu}
-                  className="block py-3 px-4 rounded-xl hover:bg-zinc-800 hover:text-violet-400 transition-all duration-200"
+                  className="block py-4 px-6 rounded-2xl hover:bg-zinc-800 hover:text-violet-400 transition-all duration-200 font-medium"
                 >
                   {item.name}
                 </a>
@@ -121,16 +121,16 @@ const Header = () => {
             ))}
           </ul>
 
-          {/* Social Links & Resume */}
-          <div className="px-6 pb-8 pt-4 border-t border-zinc-700 mt-4">
-            <p className="text-zinc-500 text-sm mb-4 px-4">Connect with me</p>
+          {/* Social Links & Resume Section */}
+          <div className="px-6 pb-8 pt-6 bg-zinc-900 border-t border-zinc-700">
+            <p className="text-zinc-400 text-sm mb-5 px-4 font-medium">Connect with me</p>
 
-            <div className="flex items-center gap-4 px-4">
+            <div className="flex items-center gap-4 px-4 mb-8">
               <a
                 href="https://www.linkedin.com/in/faria-usman-856415309"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-violet-400 transition-colors p-3 hover:bg-zinc-800 rounded-xl"
+                className="text-zinc-300 hover:text-violet-400 transition-all p-4 hover:bg-zinc-800 rounded-2xl"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin size={24} />
@@ -139,7 +139,7 @@ const Header = () => {
                 href="https://github.com/fariau"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-violet-400 transition-colors p-3 hover:bg-zinc-800 rounded-xl"
+                className="text-zinc-300 hover:text-violet-400 transition-all p-4 hover:bg-zinc-800 rounded-2xl"
                 aria-label="GitHub"
               >
                 <FaGithub size={24} />
@@ -148,7 +148,7 @@ const Header = () => {
                 href="https://twitter.com/fariausman"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-400 hover:text-violet-400 transition-colors p-3 hover:bg-zinc-800 rounded-xl"
+                className="text-zinc-300 hover:text-violet-400 transition-all p-4 hover:bg-zinc-800 rounded-2xl"
                 aria-label="Twitter"
               >
                 <FaTwitter size={24} />
@@ -156,19 +156,19 @@ const Header = () => {
             </div>
 
             {/* Download Resume Button */}
-            <div className="mt-8 px-4">
+            <div className="px-4">
               <a
-                href="/resume.png"
+                href="https://my-resume-henna-delta.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full group inline-flex items-center justify-center gap-3 py-3.5 px-6 
-               bg-gradient-to-r from-violet-600 to-fuchsia-600 
-               hover:from-violet-500 hover:to-fuchsia-500 
-               active:from-violet-700 active:to-fuchsia-700
-               text-white font-medium rounded-2xl transition-all duration-300 
-               shadow-md hover:shadow-violet-500/40 border border-violet-400/20"
+                           bg-gradient-to-r from-violet-600 to-fuchsia-600 
+                           hover:from-violet-500 hover:to-fuchsia-500 
+                           active:from-violet-700 active:to-fuchsia-700
+                           text-white font-medium rounded-2xl transition-all duration-300 
+                           shadow-md hover:shadow-violet-500/40 border border-violet-400/20"
               >
-                Download Resume
+                See My Resume
                 <span className="transition-transform group-hover:translate-x-1">↓</span>
               </a>
             </div>

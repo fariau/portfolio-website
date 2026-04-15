@@ -48,7 +48,8 @@ const Hero = () => {
                active:from-violet-700 active:to-fuchsia-700
                text-white transition-all duration-300 
                shadow-lg shadow-violet-500/40 hover:shadow-xl hover:shadow-violet-500/50 
-               border border-violet-400/20 hover:border-violet-400/40"
+               border border-violet-400/20 hover:border-violet-400/40
+               w-full sm:w-auto min-w-[180px]"
               >
                 Get In Touch
                 <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
@@ -56,15 +57,16 @@ const Hero = () => {
 
               {/* Secondary Button - Download Resume */}
               <a
-                href="/resume.png"
+                href="https://my-resume-henna-delta.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center px-8 py-3.5 text-base font-semibold rounded-2xl 
                border-2 border-violet-400 text-violet-300 hover:text-white 
                hover:border-violet-300 hover:bg-violet-950/50 
-               transition-all duration-300"
+               transition-all duration-300
+               w-full sm:w-auto min-w-[180px]"
               >
-                Download Resume
+               See My Resume
               </a>
             </div>
           </div>
