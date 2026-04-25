@@ -68,6 +68,8 @@ const projects: ProjectType[] = [
   { id: 51, title: "Physical AI & Humanoid Robotics Textbook", img: "/project-51.png", link: "https://physical-ai-humanoid-robotics-book-beige.vercel.app/", category: "cli" },
   { id: 52, title: "Custom Portfolio", img: "/project-52.png", link: "https://custom-portfolio-xi.vercel.app/", category: "html-css" },
   { id: 53, title: "Humanoid Robotic Book", img: "/project-53.png", link: "https://fariau.github.io/Humanoid-Robotic-Book/", category: "cli" },
+  { id: 54, title: "Rock Paper Scissors", img: "/project-54.png", link: "https://rock-paper-scissors-orpin-alpha.vercel.app/", category: "html-css" },
+  { id: 55, title: "Tic Tac Toe ", img: "/project-55.png", link: "https://tic-tac-toe-sable-zeta-29.vercel.app/", category: "html-css" },
 ];
 
 const StackedSection = ({

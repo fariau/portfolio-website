@@ -5,8 +5,8 @@ import Projects from "@/components/Project";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import About from "@/components/About";
+import Certifications from "@/components/Certificates";
 import AOS from "aos";
-import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 export default function Home() {
@@ -25,9 +25,11 @@ export default function Home() {
     <main>
       <Hero />
       <Projects />
+      <Certifications />
       <Skills />
-      <Contact />
       <About />
+      <Contact />
+      
     </main>
   );
 }
