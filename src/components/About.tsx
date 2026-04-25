@@ -38,7 +38,8 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            I am currently enrolled in the prestigious <span className="text-zinc-200 font-medium">Governor Initiative for Artificial Intelligence and Computing (GIAIC)</span>, 
+            I am currently enrolled in the prestigious 
+            <span className="text-zinc-200 font-medium"> Governor Initiative for Artificial Intelligence and Computing (GIAIC)</span>, 
             where I am pursuing an advanced program specializing in 
             <span className="text-violet-300 font-medium"> Artificial Intelligence</span>, 
             <span className="text-violet-300 font-medium"> Web 3.0</span>, and the 
@@ -50,11 +51,12 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            My primary passion lies in modern frontend and full-stack web development. I build responsive, 
-            high-performance, and user-centric applications using 
+            My primary passion lies in modern frontend development. I build responsive, high-performance, and user-centric applications using 
             <span className="text-violet-300 font-medium"> React.js</span>, 
             <span className="text-violet-300 font-medium"> Next.js</span>, 
-            <span className="text-violet-300 font-medium"> TypeScript</span>, and 
+            <span className="text-violet-300 font-medium"> HTML</span>, 
+            <span className="text-violet-300 font-medium"> CSS</span>, 
+            <span className="text-violet-300 font-medium"> JavaScript</span>, and 
             <span className="text-violet-300 font-medium"> Tailwind CSS</span>.
           </motion.p>
 
@@ -63,9 +65,10 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            I strongly believe in writing clean, maintainable code with thoughtful user experience design. 
-            My goal is to evolve into a proficient full-stack developer capable of delivering impactful 
-            digital solutions to real-world problems.
+            I also use 
+            <span className="text-violet-300 font-medium"> TypeScript</span> for building type-safe and scalable applications,{" "}
+            <span className="text-violet-300 font-medium"> Python</span> for automation, scripting, and small AI-based tools, and{" "}
+            <span className="text-violet-300 font-medium"> Docusaurus</span> for creating structured and clean technical documentation.
           </motion.p>
 
           <motion.p 
@@ -73,20 +76,27 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
           >
-            In addition to web technologies, I actively use 
-            <span className="text-violet-300 font-medium"> Python</span> for scripting, automation, 
-            data processing, and building small utility tools. I am also proficient with Microsoft Office 
-            tools for professional documentation, planning, and communication.
+            My AI skillset includes 
+            <span className="text-violet-300 font-medium"> Prompt Engineering</span>,{" "}
+            <span className="text-violet-300 font-medium"> Claude Code</span>, and{" "}
+            <span className="text-violet-300 font-medium"> CLI tools</span>, which I use to improve productivity, automate workflows, and build smarter development processes.
           </motion.p>
 
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.7, delay: 0.5 }}
+          >
+            I strongly believe in writing clean, maintainable code with thoughtful user experience design. My goal is to become a strong full-stack developer and contribute to impactful digital solutions.
+          </motion.p>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
             className="pt-6 text-zinc-500 italic border-l-4 border-violet-500 pl-5"
           >
-            I am a dedicated lifelong learner with strong enthusiasm for emerging technologies and 
-            continuously improving my craft to deliver high-quality, efficient solutions.
+            I am a dedicated lifelong learner who continuously explores new technologies and improves skills in both development and AI.
           </motion.p>
         </div>
 

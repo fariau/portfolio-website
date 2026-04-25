@@ -211,8 +211,8 @@ export default function Project() {
       {/* Category Stacked Sections */}
       <StackedSection title="Next.js Web Projects" categoryProjects={nextjsProjects} />
       <StackedSection title="Python & Streamlit Projects" categoryProjects={pythonProjects} />
-      <StackedSection title="HTML & CSS Projects" categoryProjects={htmlCssProjects} />
       <StackedSection title="CLI & Other Tools" categoryProjects={cliProjects} />
+      <StackedSection title="HTML & CSS Projects" categoryProjects={htmlCssProjects} />
       <StackedSection title="TypeScript Projects" categoryProjects={typescriptProjects} />
 
 
