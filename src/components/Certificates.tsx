@@ -8,9 +8,14 @@ const certificates = [
         image: "/c1.png",
     },
     {
-        title: "Elementor",
-        issuer: "Learn Online",
-        image: "/c2.png",
+        title: "Basics of Artificial Intelligence",
+        issuer: "UniAthena",
+        image: "/c5.png",
+    },
+    {
+        title: "Prompt Engineering in 30 Minutes",
+        issuer: "AI IXX",
+        image: "/c7.png",
     },
     {
         title: "Basics of Python",
@@ -18,19 +23,24 @@ const certificates = [
         image: "/c3.png",
     },
     {
+        title: "Python for AI",
+        issuer: "AI IXX",
+        image: "/c8.png",
+    },
+    {
         title: "Introduction to HTML and CSS",
         issuer: "Alison",
         image: "/c4.png",
     },
     {
-        title: "Basics of Artificial Intelligence",
-        issuer: "UniAthena",
-        image: "/c5.png",
-    },
-    {
         title: "Certified HTML Developer",
         issuer: "W3 Schools",
         image: "/c6.png",
+    },
+    {
+        title: "Elementor",
+        issuer: "Learn Online",
+        image: "/c2.png",
     },
 ];
 
