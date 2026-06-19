@@ -10,7 +10,8 @@ interface ProjectType {
   title: string;
   img: string;
   link?: string;
-  category: "nextjs" | "html-css" | "python" | "typescript" | "cli";
+  category: "nextjs" | "html-css" | "python" | "typescript" | "cli" | "Internship";
+  featured?: boolean;
 }
 
 const projects: ProjectType[] = [
@@ -69,7 +70,20 @@ const projects: ProjectType[] = [
   { id: 52, title: "Custom Portfolio", img: "/project-52.png", link: "https://custom-portfolio-xi.vercel.app/", category: "html-css" },
   { id: 53, title: "Humanoid Robotic Book", img: "/project-53.png", link: "https://fariau.github.io/Humanoid-Robotic-Book/", category: "cli" },
   { id: 54, title: "Rock Paper Scissors", img: "/project-54.png", link: "https://rock-paper-scissors-orpin-alpha.vercel.app/", category: "html-css" },
-  { id: 55, title: "Tic Tac Toe ", img: "/project-55.png", link: "https://tic-tac-toe-sable-zeta-29.vercel.app/", category: "html-css" },
+  { id: 55, title: "Tic Tac Toe", img: "/project-55.png", link: "https://tic-tac-toe-sable-zeta-29.vercel.app/", category: "html-css" },
+  { id: 56, title: "EduFlow — E-Learning Platform", img: "/project-56.png", link: "https://e-learning-app-new.vercel.app/", category: "nextjs"},
+  { id: 57, title: "Drawing-app", img: "/project-57.png", link: "https://drawing-app-iota-five.vercel.app/", category: "html-css" },
+  { id: 58, title: "Typescript-45-Question", img: "/project-58.png", link: "https://github.com/fariau/typescript-45-question", category: "typescript" },
+  { id: 59, title: "Simple-ATM", img: "/project-59.png", link: "https://github.com/fariau/simple-ATM", category: "typescript" },
+  { id: 60, title: "Number-Guessing-Game", img: "/project-60.png", link: "https://github.com/fariau/cli-number-guessing-game", category: "typescript" },
+  { id: 61, title: "Landing Page", img: "/project-61.png", link: "https://task-1-landing-page-ruby.vercel.app/", category: "Internship" },
+  { id: 62, title: "Animated UI Component", img: "/project-62.png", link: "https://task-2-animated-ui-component.vercel.app/", category: "Internship" },
+  { id: 63, title: "Admin Dashboard UI", img: "/project-63.png", link: "https://task-3-admin-dashboard-ui.vercel.app/", category: "Internship" },
+  { id: 64, title: "Multi-Step Form", img: "/project-64.png", link: "https://task-4-multi-step-form.vercel.app/", category: "Internship" },
+  { id: 65, title: "Component Library", img: "/project-65.png", link: "https://task-5-component-library.vercel.app/", category: "Internship" },
+  { id: 66, title: "Real-Time Notification Dashboard", img: "/project-66.png", link: "https://task-6-real-time-ui.vercel.app/", category: "Internship" },
+  { id: 67, title: "Final Dashboard", img: "/project-67.png", link: "https://final-dashboard-inky.vercel.app/", category: "Internship" },
+
 ];
 
 const StackedSection = ({
@@ -83,9 +97,10 @@ const StackedSection = ({
   const [positions, setPositions] = useState<{ x: number; y: number; rotate: number }[]>(
     categoryProjects.map(() => ({ x: 0, y: 0, rotate: 0 }))
   );
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    if (categoryProjects.length === 0) return;
+    if (categoryProjects.length === 0 || isPaused) return;
 
     const interval = setInterval(() => {
       setStack((prev) => {
@@ -96,32 +111,42 @@ const StackedSection = ({
 
       setPositions(
         categoryProjects.map(() => ({
-          x: Math.random() * 60 - 30,
-          y: Math.random() * 50 - 25,
-          rotate: Math.random() * 12 - 6,
+          x: Math.random() * 40 - 20,
+          y: Math.random() * 30 - 15,
+          rotate: Math.random() * 10 - 5,
         }))
       );
     }, 3800);
 
     return () => clearInterval(interval);
-  }, [categoryProjects]);
+  }, [categoryProjects, isPaused]);
+
+  if (categoryProjects.length === 0) return null;
 
   return (
-    <div className="mb-12 w-full">
+    <div className="w-full">
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="text-3xl md:text-4xl font-bold text-center text-zinc-100 tracking-tight mb-8"
+        className="text-2xl md:text-3xl font-bold text-center text-zinc-100 tracking-tight mb-1"
       >
         {title}
       </motion.h2>
+      <p className="text-center text-zinc-500 text-sm mb-6">
+        {categoryProjects.length} project{categoryProjects.length > 1 ? "s" : ""}
+      </p>
 
-      <div className="relative w-full max-w-4xl lg:max-w-5xl aspect-[4/3] sm:aspect-[16/10] md:aspect-video mx-auto flex items-center justify-center">
+      <div
+        className="relative w-full aspect-[4/3] sm:aspect-[16/10] flex items-center justify-center"
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}
+      >
         {stack.map((project, index) => (
           <motion.div
             key={project.id}
-            className="absolute w-[58%] sm:w-[54%] md:w-[50%] lg:w-[46%] aspect-[4/3] sm:aspect-[16/10] md:aspect-video rounded-3xl overflow-hidden border border-zinc-700 shadow-2xl bg-zinc-900"
+            className="absolute w-[80%] sm:w-[75%] aspect-[4/3] sm:aspect-[16/10] rounded-2xl overflow-hidden border border-zinc-700 shadow-2xl bg-zinc-900"
             style={{ zIndex: stack.length - index }}
             animate={{
               x: positions[index]?.x ?? 0,
@@ -130,10 +155,10 @@ const StackedSection = ({
             }}
             transition={{ duration: 1.8, ease: "easeInOut" }}
             whileHover={{
-              scale: 1.06,
+              scale: 1.05,
               rotate: 0,
               x: 0,
-              y: -20,
+              y: -15,
               boxShadow: "0 0 40px rgba(139, 92, 246, 0.3)",
             }}
           >
@@ -143,14 +168,14 @@ const StackedSection = ({
                 alt={project.title}
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 58vw, (max-width: 1200px) 50vw, 46vw"
+                sizes="(max-width: 768px) 80vw, 38vw"
                 priority={index < 2}
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent" />
 
-              <div className="absolute inset-0 p-5 sm:p-6 flex flex-col justify-end">
-                <h3 className="text-lg sm:text-xl font-semibold text-white mb-2 tracking-tight">
+              <div className="absolute inset-0 p-4 sm:p-5 flex flex-col justify-end">
+                <h3 className="text-base sm:text-lg font-semibold text-white mb-1.5 tracking-tight">
                   {project.title}
                 </h3>
 
@@ -159,7 +184,7 @@ const StackedSection = ({
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-violet-400 hover:text-violet-300 font-medium text-sm flex items-center gap-2 transition-colors"
+                    className="text-violet-400 hover:text-violet-300 font-medium text-sm flex items-center gap-2 transition-colors w-fit"
                   >
                     View Live Project <span aria-hidden="true">→</span>
                   </a>
@@ -176,6 +201,7 @@ const StackedSection = ({
 export default function Project() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const internshipProjects = projects.filter(p => p.category === "Internship");
   const nextjsProjects = projects.filter(p => p.category === "nextjs");
   const typescriptProjects = projects.filter(p => p.category === "typescript");
   const htmlCssProjects = projects.filter(p => p.category === "html-css");
@@ -197,24 +223,43 @@ export default function Project() {
       <motion.div
         initial={{ opacity: 0, y: -40 }}
         whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.9 }}
-        className="text-center mb-14 relative z-10"
+        className="text-center mb-6 relative z-10"
       >
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-zinc-100 tracking-tighter">
           My <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Projects</span>
         </h1>
         <p className="mt-4 text-zinc-400 text-lg max-w-2xl mx-auto">
-          A collection of web applications, tools, and experiments built with modern technologies
+          A collection of {projects.length}+ web applications, tools, and experiments built with modern technologies
         </p>
       </motion.div>
 
-      {/* Category Stacked Sections */}
-      <StackedSection title="Next.js Web Projects" categoryProjects={nextjsProjects} />
-      <StackedSection title="Python & Streamlit Projects" categoryProjects={pythonProjects} />
-      <StackedSection title="CLI & Other Tools" categoryProjects={cliProjects} />
-      <StackedSection title="HTML & CSS Projects" categoryProjects={htmlCssProjects} />
-      <StackedSection title="TypeScript Projects" categoryProjects={typescriptProjects} />
+      {/* Quick stats */}
+      <div className="flex flex-wrap justify-center gap-3 mb-14 relative z-10">
+        {[
+          { label: "Internship", count: internshipProjects.length },
+          { label: "Next.js", count: nextjsProjects.length },
+          { label: "Python", count: pythonProjects.length },
+          { label: "CLI Tools", count: cliProjects.length },
+          { label: "HTML/CSS", count: htmlCssProjects.length },
+          { label: "TypeScript", count: typescriptProjects.length },
+        ].map((s) => (
+          <span key={s.label} className="px-4 py-1.5 rounded-full text-sm font-medium border border-violet-500/30 text-violet-300 bg-violet-500/10">
+            {s.label} <span className="text-zinc-400">· {s.count}</span>
+          </span>
+        ))}
+      </div>
 
+      {/* 2-COLUMN GRID — categories side by side */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-16 relative z-10 max-w-6xl mx-auto">
+        <StackedSection title="🏆 Internship Projects" categoryProjects={internshipProjects} />
+        <StackedSection title="Next.js Web Projects" categoryProjects={nextjsProjects} />
+        <StackedSection title="Python & Streamlit Projects" categoryProjects={pythonProjects} />
+        <StackedSection title="TypeScript Projects" categoryProjects={typescriptProjects} />
+        <StackedSection title="CLI & Other Tools" categoryProjects={cliProjects} />
+        <StackedSection title="HTML & CSS Projects" categoryProjects={htmlCssProjects} />
+      </div>
 
       {/* View All Projects Button */}
       <div className="flex justify-center mt-16">

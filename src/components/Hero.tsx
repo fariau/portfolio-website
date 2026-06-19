@@ -26,7 +26,7 @@ const Hero = () => {
               </h1>
 
               <p className="text-xl md:text-2xl text-violet-400 font-medium tracking-wide">
-                Frontend Developer & AI Enthusiast
+                Frontend Developer & AI Engineer
               </p>
             </div>
 
@@ -41,6 +41,8 @@ const Hero = () => {
               <span className="text-violet-300">Tailwind CSS</span>. <br />
               I also work with{" "}
               <span className="text-violet-300">Python</span>,{" "}
+              <span className="text-violet-300">Streamlit</span>,{" "}
+              <span className="text-violet-300">Chainlit</span>,{" "}
               <span className="text-violet-300">Docusaurus</span>, and{" "}
               <span className="text-violet-300">Prompt Engineering</span>.
               Along with AI tools like{" "}
@@ -79,7 +81,6 @@ const Hero = () => {
             </div>
           </div>
 
-
           {/* RIGHT IMAGE */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end" data-aos="fade-left" data-aos-delay="150">
 
@@ -98,7 +99,7 @@ const Hero = () => {
               <div className="relative w-[220px] sm:w-[260px] md:w-[300px] lg:w-[360px] aspect-square overflow-hidden rounded-3xl shadow-2xl border border-zinc-800/80">
                 <Image
                   src="/its-me.jpg"
-                  alt="Faria Usman - Frontend Developer"
+                  alt="Faria Usman - Frontend Developer & AI Engineer"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-700"
                   priority
