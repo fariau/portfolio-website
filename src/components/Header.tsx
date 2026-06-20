@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { FaLinkedin, FaGithub, FaTwitter } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -143,15 +143,6 @@ const Header = () => {
                 aria-label="GitHub"
               >
                 <FaGithub size={24} />
-              </a>
-              <a
-                href="https://twitter.com/fariausman"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-zinc-300 hover:text-violet-400 transition-all p-4 hover:bg-zinc-800 rounded-2xl"
-                aria-label="Twitter"
-              >
-                <FaTwitter size={24} />
               </a>
             </div>
 
