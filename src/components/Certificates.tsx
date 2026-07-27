@@ -10,15 +10,33 @@ const certificates = [
         badge: "🏆 Internship Completed",
     },
     {
+        title: "Python for Data Science",
+        issuer: "Saylor Academy (Saylor University)",
+        image: "/c10.png",
+        badge: "Verified ✔",
+    },
+    {
         title: "Master ChatGPT",
         issuer: "UniAthena",
         image: "/c1.png",
         badge: "Verified ✔",
     },
     {
+        title: "Cloude 101",
+        issuer: "Anthropic",
+        image: "/c9.png",
+        badge: "Verified ✔",
+    },
+    {
         title: "Basics of Artificial Intelligence",
         issuer: "UniAthena",
         image: "/c5.png",
+        badge: "Verified ✔",
+    },
+    {
+        title: "Python Essentials 1",
+        issuer: "Cisco Networking Academy & Python Institute",
+        image: "/c11.png",
         badge: "Verified ✔",
     },
     {
@@ -34,15 +52,15 @@ const certificates = [
         badge: "Verified ✔",
     },
     {
-        title: "Python for AI",
-        issuer: "AI IXX",
-        image: "/c8.png",
-        badge: "Verified ✔",
-    },
-    {
         title: "Introduction to HTML and CSS",
         issuer: "Alison",
         image: "/c4.png",
+        badge: "Verified ✔",
+    },
+    {
+        title: "Python for AI",
+        issuer: "AI IXX",
+        image: "/c8.png",
         badge: "Verified ✔",
     },
     {
