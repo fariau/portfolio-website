@@ -31,9 +31,9 @@ const Footer = () => {
             className="text-center md:text-left"
           >
             <p className="text-xl font-bold text-zinc-100 tracking-tight">
-              Faria <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Usman</span>
+              Faria <span className="bg-gradient-to-r from-brand-400 to-brand-300 bg-clip-text text-transparent">Usman</span>
             </p>
-            <p className="text-zinc-500 text-sm mt-1">Frontend Developer & AI Engineer</p>
+            <p className="text-zinc-500 text-sm mt-1">AI Engineer & Agentic AI Developer</p>
           </motion.div>
 
           {/* Nav links */}
@@ -48,7 +48,7 @@ const Footer = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-zinc-400 hover:text-violet-400 text-sm font-medium transition-colors"
+                className="text-zinc-400 hover:text-brand-400 text-sm font-medium transition-colors"
               >
                 {link.label}
               </a>
@@ -68,7 +68,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              className="text-zinc-400 hover:text-violet-400 transition-all duration-300 hover:scale-110"
+              className="text-zinc-400 hover:text-brand-400 transition-all duration-300 hover:scale-110"
             >
               <AiFillGithub size={24} />
             </a>
@@ -77,14 +77,14 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="text-zinc-400 hover:text-violet-400 transition-all duration-300 hover:scale-110"
+              className="text-zinc-400 hover:text-brand-400 transition-all duration-300 hover:scale-110"
             >
               <AiFillLinkedin size={24} />
             </a>
             <a
               href="mailto:fariausman17@gmail.com"
               aria-label="Email"
-              className="text-zinc-400 hover:text-violet-400 transition-all duration-300 hover:scale-110"
+              className="text-zinc-400 hover:text-brand-400 transition-all duration-300 hover:scale-110"
             >
               <AiOutlineMail size={24} />
             </a>

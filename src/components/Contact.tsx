@@ -57,7 +57,7 @@ const Contact = () => {
     >
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-violet-500/8 rounded-full blur-[160px]" />
+        <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-[450px] h-[450px] bg-brand-500/8 rounded-full blur-[160px]" />
       </div>
 
       <div className="max-w-5xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
@@ -72,11 +72,11 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold border border-violet-400/30 text-violet-300 bg-violet-500/10 mb-5">
-                Available for Frontend Developer Roles
+              <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold border border-brand-400/30 text-brand-200 bg-brand-500/10 mb-5">
+                Available for AI Engineering, Full-Stack Development & Automation Projects
               </span>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-100 tracking-tighter">
-                Get in <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Touch</span>
+                Get in <span className="bg-gradient-to-r from-brand-400 to-brand-300 bg-clip-text text-transparent">Touch</span>
               </h2>
             </div>
 
@@ -88,8 +88,8 @@ const Contact = () => {
             <div className="space-y-6 mt-10">
               {contactInfo.map((item) => (
                 <div key={item.label} className="flex items-start gap-5 group">
-                  <div className="p-4 bg-zinc-900 rounded-2xl border border-zinc-700 group-hover:border-violet-500 transition-all flex-shrink-0">
-                    <item.icon size={24} className="text-violet-400" />
+                  <div className="p-4 bg-zinc-900 rounded-2xl border border-zinc-700 group-hover:border-brand-500 transition-all flex-shrink-0">
+                    <item.icon size={24} className="text-brand-400" />
                   </div>
                   <div>
                     <p className="text-zinc-500 text-sm font-medium mb-1">{item.label}</p>
@@ -98,7 +98,7 @@ const Contact = () => {
                         href={item.href}
                         target={item.href.startsWith("http") ? "_blank" : undefined}
                         rel="noopener noreferrer"
-                        className="text-zinc-300 hover:text-violet-400 text-lg transition-colors break-all"
+                        className="text-zinc-300 hover:text-brand-400 text-lg transition-colors break-all"
                       >
                         {item.value}
                       </a>
@@ -133,8 +133,8 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Your full name"
                   className="w-full h-12 bg-zinc-950 border border-zinc-700 rounded-2xl px-5 text-zinc-100 
-                  placeholder-zinc-500 focus:outline-none focus:border-violet-500 
-                  focus:ring-2 focus:ring-violet-500/40 transition-all"
+                  placeholder-zinc-500 focus:outline-none focus:border-brand-500 
+                  focus:ring-2 focus:ring-brand-500/40 transition-all"
                 />
               </div>
 
@@ -149,8 +149,8 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="your.email@example.com"
                   className="w-full h-12 bg-zinc-950 border border-zinc-700 rounded-2xl px-5 text-zinc-100 
-                  placeholder-zinc-500 focus:outline-none focus:border-violet-500 
-                  focus:ring-2 focus:ring-violet-500/40 transition-all"
+                  placeholder-zinc-500 focus:outline-none focus:border-brand-500 
+                  focus:ring-2 focus:ring-brand-500/40 transition-all"
                 />
               </div>
 
@@ -165,18 +165,18 @@ const Contact = () => {
                   onChange={handleChange}
                   placeholder="Tell me about your project or idea — I'll get back to you soon."
                   className="w-full bg-zinc-950 border border-zinc-700 rounded-3xl px-5 py-4 text-zinc-100 
-                  placeholder-zinc-500 focus:outline-none focus:border-violet-500 
-                  focus:ring-2 focus:ring-violet-500/40 transition-all resize-none"
+                  placeholder-zinc-500 focus:outline-none focus:border-brand-500 
+                  focus:ring-2 focus:ring-brand-500/40 transition-all resize-none"
                 />
               </div>
 
               {/* Button */}
               <button
                 type="submit"
-                className="w-full mt-6 group px-10 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 
+                className="w-full mt-6 group px-10 py-4 bg-gradient-to-r from-brand-500 to-brand-700 
                 hover:scale-[1.02] active:scale-95 text-white font-semibold text-lg rounded-2xl 
                 transition-all duration-300 flex items-center justify-center gap-3 
-                shadow-lg shadow-violet-500/40 hover:shadow-xl hover:shadow-violet-500/60"
+                shadow-lg shadow-brand-500/40 hover:shadow-xl hover:shadow-brand-500/60"
               >
                 {status === "sent" ? "Opening your email app..." : "Send Message"}
                 <span className="group-hover:translate-x-1 transition-transform">→</span>

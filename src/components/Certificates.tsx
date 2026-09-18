@@ -22,7 +22,7 @@ const certificates = [
         badge: "Verified ✔",
     },
     {
-        title: "Cloude 101",
+        title: "Claude 101",
         issuer: "Anthropic",
         image: "/c9.png",
         badge: "Verified ✔",
@@ -85,7 +85,7 @@ const Certifications = () => {
                 {/* Header */}
                 <div className="text-center mb-16" data-aos="fade-up">
                     <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tighter mb-4">
-                        <span className="bg-gradient-to-r from-violet-400 via-fuchsia-400 to-violet-400 bg-clip-text text-transparent">
+                        <span className="bg-gradient-to-r from-brand-400 via-brand-300 to-brand-400 bg-clip-text text-transparent">
                             Certifications
                         </span>
                     </h2>
@@ -103,19 +103,19 @@ const Certifications = () => {
                             className={`group relative overflow-hidden rounded-2xl shadow-xl flex flex-col
                                 hover:-translate-y-2 transition-all duration-500
                                 ${item.highlight
-                                    ? "bg-gradient-to-br from-violet-900/40 to-fuchsia-900/20 border-2 border-violet-500/60 hover:border-violet-400"
-                                    : "bg-zinc-900 border border-zinc-800 hover:border-violet-500/40"
+                                    ? "bg-gradient-to-br from-brand-800/40 to-brand-900/20 border-2 border-brand-500/60 hover:border-brand-400"
+                                    : "bg-zinc-900 border border-zinc-800 hover:border-brand-500/40"
                                 }`}
                         >
                             {/* Glow on hover */}
                             <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition duration-500">
-                                <div className="absolute -top-20 -left-20 w-56 h-56 bg-violet-500/10 rounded-full blur-3xl" />
-                                <div className="absolute -bottom-20 -right-20 w-56 h-56 bg-fuchsia-500/10 rounded-full blur-3xl" />
+                                <div className="absolute -top-20 -left-20 w-56 h-56 bg-brand-500/10 rounded-full blur-3xl" />
+                                <div className="absolute -bottom-20 -right-20 w-56 h-56 bg-brand-600/10 rounded-full blur-3xl" />
                             </div>
 
                             {/* Featured badge for internship */}
                             {item.highlight && (
-                                <div className="absolute top-4 right-4 z-20 bg-violet-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg shadow-violet-500/30">
+                                <div className="absolute top-4 right-4 z-20 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg shadow-brand-500/30">
                                     ⭐ Featured
                                 </div>
                             )}
@@ -136,7 +136,7 @@ const Certifications = () => {
                                 {/* Badge */}
                                 <span className={`inline-flex items-center gap-1.5 mb-3 px-3 py-1 rounded-full text-xs font-semibold border w-fit
                                     ${item.highlight
-                                        ? "border-violet-400/60 text-violet-200 bg-violet-500/20"
+                                        ? "border-brand-400/60 text-brand-100 bg-brand-500/20"
                                         : "border-emerald-500/30 text-emerald-400 bg-emerald-500/10"
                                     }`}>
                                     {item.badge}
@@ -150,7 +150,7 @@ const Certifications = () => {
                                 {/* Issuer */}
                                 <p className="text-zinc-400 text-sm mt-auto">
                                     Issued by{" "}
-                                    <span className="text-violet-400 font-semibold">
+                                    <span className="text-brand-400 font-semibold">
                                         {item.issuer}
                                     </span>
                                 </p>

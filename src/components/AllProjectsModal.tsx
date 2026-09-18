@@ -80,7 +80,7 @@ const AllProjectsModal = ({ isOpen, onClose, allProjects }: AllProjectsModalProp
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               placeholder="Search projects..."
-              className="w-full h-11 bg-zinc-950 border border-zinc-700 rounded-xl pl-11 pr-4 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-violet-500 focus:ring-2 focus:ring-violet-500/30 transition-all"
+              className="w-full h-11 bg-zinc-950 border border-zinc-700 rounded-xl pl-11 pr-4 text-sm text-zinc-100 placeholder-zinc-500 focus:outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 transition-all"
             />
           </div>
 
@@ -92,7 +92,7 @@ const AllProjectsModal = ({ isOpen, onClose, allProjects }: AllProjectsModalProp
                 onClick={() => setActiveCategory(cat)}
                 className={`flex-shrink-0 px-4 py-2 rounded-xl text-xs font-semibold transition-all whitespace-nowrap
                   ${activeCategory === cat
-                    ? "bg-violet-600 text-white"
+                    ? "bg-brand-500 text-white"
                     : "bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-zinc-200"
                   }`}
               >
@@ -117,7 +117,7 @@ const AllProjectsModal = ({ isOpen, onClose, allProjects }: AllProjectsModalProp
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: Math.min(index * 0.03, 0.5) }}
-                  className="group bg-zinc-950 border border-zinc-800 rounded-3xl overflow-hidden hover:border-violet-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/10"
+                  className="group bg-zinc-950 border border-zinc-800 rounded-3xl overflow-hidden hover:border-brand-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-brand-500/10"
                 >
                   {/* Image Container */}
                   <div className="relative aspect-video overflow-hidden">
@@ -130,14 +130,14 @@ const AllProjectsModal = ({ isOpen, onClose, allProjects }: AllProjectsModalProp
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
 
                     {/* Category badge */}
-                    <span className="absolute top-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-zinc-900/80 text-violet-300 border border-violet-500/30 backdrop-blur-sm">
+                    <span className="absolute top-3 left-3 text-xs font-semibold px-2.5 py-1 rounded-full bg-zinc-900/80 text-brand-200 border border-brand-500/30 backdrop-blur-sm">
                       {categoryLabels[project.category] || project.category}
                     </span>
                   </div>
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="font-semibold text-lg text-zinc-100 line-clamp-2 mb-4 group-hover:text-violet-300 transition-colors">
+                    <h3 className="font-semibold text-lg text-zinc-100 line-clamp-2 mb-4 group-hover:text-brand-200 transition-colors">
                       {project.title}
                     </h3>
 
@@ -146,7 +146,7 @@ const AllProjectsModal = ({ isOpen, onClose, allProjects }: AllProjectsModalProp
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 font-medium text-sm transition-colors"
+                        className="inline-flex items-center gap-2 text-brand-400 hover:text-brand-200 font-medium text-sm transition-colors"
                       >
                         View Live Project
                         <span className="group-hover:translate-x-1 transition-transform">→</span>

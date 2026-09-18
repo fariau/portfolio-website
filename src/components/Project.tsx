@@ -159,7 +159,7 @@ const StackedSection = ({
               rotate: 0,
               x: 0,
               y: -15,
-              boxShadow: "0 0 40px rgba(139, 92, 246, 0.3)",
+              boxShadow: "0 0 40px rgba(33, 158, 130, 0.25)",
             }}
           >
             <div className="relative w-full h-full">
@@ -184,7 +184,7 @@ const StackedSection = ({
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-violet-400 hover:text-violet-300 font-medium text-sm flex items-center gap-2 transition-colors w-fit"
+                    className="text-brand-400 hover:text-brand-200 font-medium text-sm flex items-center gap-2 transition-colors w-fit"
                   >
                     View Live Project <span aria-hidden="true">→</span>
                   </a>
@@ -215,8 +215,8 @@ export default function Project() {
     >
       {/* Subtle Background Glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-1/4 top-1/4 w-[700px] h-[700px] bg-violet-500/10 rounded-full blur-[140px]" />
-        <div className="absolute right-1/4 bottom-1/4 w-[600px] h-[600px] bg-fuchsia-500/10 rounded-full blur-[130px]" />
+        <div className="absolute left-1/4 top-1/4 w-[700px] h-[700px] bg-brand-500/10 rounded-full blur-[140px]" />
+        <div className="absolute right-1/4 bottom-1/4 w-[600px] h-[600px] bg-brand-600/10 rounded-full blur-[130px]" />
       </div>
 
       {/* Main Heading */}
@@ -228,7 +228,7 @@ export default function Project() {
         className="text-center mb-6 relative z-10"
       >
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-zinc-100 tracking-tighter">
-          My <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Projects</span>
+          My <span className="bg-gradient-to-r from-brand-400 to-brand-300 bg-clip-text text-transparent">Projects</span>
         </h1>
         <p className="mt-4 text-zinc-400 text-lg max-w-2xl mx-auto">
           A collection of {projects.length}+ web applications, tools, and experiments built with modern technologies
@@ -245,7 +245,7 @@ export default function Project() {
           { label: "HTML/CSS", count: htmlCssProjects.length },
           { label: "TypeScript", count: typescriptProjects.length },
         ].map((s) => (
-          <span key={s.label} className="px-4 py-1.5 rounded-full text-sm font-medium border border-violet-500/30 text-violet-300 bg-violet-500/10">
+          <span key={s.label} className="px-4 py-1.5 rounded-full text-sm font-medium border border-brand-500/30 text-brand-200 bg-brand-500/10">
             {s.label} <span className="text-zinc-400">· {s.count}</span>
           </span>
         ))}
@@ -265,13 +265,13 @@ export default function Project() {
       <div className="flex justify-center mt-16">
         <button
           onClick={() => setIsModalOpen(true)}
-          className="group px-10 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 
-             hover:from-violet-500 hover:to-fuchsia-500 
-             active:from-violet-700 active:to-fuchsia-700
+          className="group px-10 py-4 bg-gradient-to-r from-brand-500 to-brand-700 
+             hover:from-brand-500 hover:to-brand-600 
+             active:from-brand-700 active:to-brand-800
              text-white font-semibold text-lg rounded-2xl 
              transition-all duration-300 flex items-center gap-3 
-             shadow-lg shadow-violet-500/40 hover:shadow-2xl hover:shadow-violet-500/50 
-             border border-violet-400/20 hover:border-violet-400/40"
+             shadow-lg shadow-brand-500/40 hover:shadow-2xl hover:shadow-brand-500/50 
+             border border-brand-400/20 hover:border-brand-400/40"
         >
           View All Projects
           <span className="transition-transform group-hover:translate-x-1">→</span>

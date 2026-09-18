@@ -5,22 +5,25 @@ import { motion } from "framer-motion";
 
 const Skills = () => {
   const skills = [
-    { name: "HTML", icon: "📄" },
-    { name: "CSS", icon: "🎨" },
+    { name: "HTML & CSS", icon: "📄" },
     { name: "JavaScript", icon: "🟨" },
     { name: "TypeScript", icon: "⚡" },
     { name: "React.js", icon: "⚛️" },
     { name: "Next.js", icon: "▲" },
     { name: "Tailwind CSS", icon: "🌊" },
     { name: "Python", icon: "🐍" },
-    { name: "Streamlit", icon: "🔴" },
-    { name: "Chainlit", icon: "💬" },
-    { name: "Docusaurus", icon: "📚" },
+    { name: "AI Agents", icon: "🕹️" },
+    { name: "Agentic AI", icon: "🧩" },
+    { name: "AI Automation", icon: "⚙️" },
     { name: "Prompt Engineering", icon: "🧠" },
-    { name: "Claude Code", icon: "🤖" },
-    { name: "CLI Tools", icon: "💻" },
+    { name: "OpenAI API", icon: "🔌" },
+    { name: "Chainlit", icon: "💬" },
+    { name: "Streamlit", icon: "🔴" },
+    { name: "Docusaurus", icon: "📚" },
+    { name: "REST APIs", icon: "🌐" },
     { name: "Git & GitHub", icon: "🔧" },
-    { name: "Vercel", icon: "▼" },
+    { name: "CLI Tools", icon: "💻" },
+    { name: "Claude Code", icon: "🤖" },
   ];
 
   return (
@@ -30,8 +33,8 @@ const Skills = () => {
     >
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-violet-500/8 rounded-full blur-[160px]" />
-        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-fuchsia-500/8 rounded-full blur-[160px]" />
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-500/8 rounded-full blur-[160px]" />
+        <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-brand-600/8 rounded-full blur-[160px]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 relative z-10">
@@ -48,7 +51,7 @@ const Skills = () => {
             <div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-zinc-100 tracking-tighter">
                 Technologies I{" "}
-                <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-400 to-brand-300 bg-clip-text text-transparent">
                   Work With
                 </span>
               </h2>
@@ -56,28 +59,22 @@ const Skills = () => {
 
             <div className="space-y-5 text-zinc-400 text-[17px] leading-relaxed">
               <p>
-                I build modern and responsive web applications using{" "}
-                <span className="text-violet-300 font-medium">HTML</span>,{" "}
-                <span className="text-violet-300 font-medium">CSS</span>,{" "}
-                <span className="text-violet-300 font-medium">JavaScript</span>,{" "}
-                <span className="text-violet-300 font-medium">React.js</span>,{" "}
-                <span className="text-violet-300 font-medium">Next.js</span>, and{" "}
-                <span className="text-violet-300 font-medium">Tailwind CSS</span>.
+                I build <span className="text-brand-300 font-medium">AI Agents</span> and{" "}
+                <span className="text-brand-300 font-medium">Agentic AI</span> systems using the OpenAI API,
+                along with AI automation workflows powered by prompt engineering.
               </p>
 
               <p>
-                I also use{" "}
-                <span className="text-violet-300 font-medium">TypeScript</span> for type-safe development,{" "}
-                <span className="text-violet-300 font-medium">Python</span> for scripting and automation, and{" "}
-                <span className="text-violet-300 font-medium">Streamlit</span> &{" "}
-                <span className="text-violet-300 font-medium">Chainlit</span> to build interactive AI-powered apps.
+                I also build modern, responsive web applications with{" "}
+                <span className="text-brand-300 font-medium">Next.js</span>, React, JavaScript,
+                TypeScript, and Tailwind CSS.
               </p>
 
               <p>
-                My AI skillset includes{" "}
-                <span className="text-violet-300 font-medium">Prompt Engineering</span> for crafting effective AI prompts,{" "}
-                <span className="text-violet-300 font-medium">Claude Code</span> for AI-assisted development workflows, and{" "}
-                <span className="text-violet-300 font-medium">CLI tools</span> for working efficiently with command-line interfaces and automation.
+                For AI-powered tools, I use Python with Streamlit and Chainlit, Docusaurus for
+                documentation, REST APIs for integrations, and{" "}
+                <span className="text-brand-300 font-medium">Claude Code</span> alongside CLI tools for
+                AI-assisted development.
               </p>
 
               <p className="text-zinc-500 italic">
@@ -95,7 +92,7 @@ const Skills = () => {
                 <div key={p.label} className="flex-1 min-w-[120px]">
                   <div className="flex justify-between text-xs text-zinc-400 mb-1.5">
                     <span>{p.label}</span>
-                    <span className="text-violet-400 font-semibold">{p.value}%</span>
+                    <span className="text-brand-400 font-semibold">{p.value}%</span>
                   </div>
                   <div className="h-1.5 bg-zinc-800 rounded-full overflow-hidden">
                     <motion.div
@@ -103,7 +100,7 @@ const Skills = () => {
                       whileInView={{ width: `${p.value}%` }}
                       viewport={{ once: true }}
                       transition={{ duration: 1.2, ease: "easeOut" }}
-                      className="h-full bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full"
+                      className="h-full bg-gradient-to-r from-brand-500 to-brand-600 rounded-full"
                     />
                   </div>
                 </div>
@@ -127,12 +124,12 @@ const Skills = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.04 }}
                 whileHover={{ scale: 1.06, y: -5 }}
-                className="group relative bg-zinc-900 border border-zinc-800 hover:border-violet-500 
+                className="group relative bg-zinc-900 border border-zinc-800 hover:border-brand-500 
                 rounded-2xl p-4 flex flex-col items-center justify-center
                 min-h-[95px] transition-all duration-300 overflow-hidden"
               >
                 {/* hover glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-violet-500/0 to-fuchsia-500/0 group-hover:from-violet-500/10 group-hover:to-fuchsia-500/10 transition-all duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-500/0 to-brand-600/0 group-hover:from-brand-500/10 group-hover:to-brand-600/10 transition-all duration-300" />
 
                 <div className="text-2xl mb-2 relative z-10 group-hover:scale-110 transition-transform duration-300">
                   {skill.icon}

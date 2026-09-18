@@ -42,7 +42,7 @@ const Header = () => {
           <span className="text-2xl md:text-3xl font-bold tracking-tighter text-white">
             Faria
           </span>
-          <span className="text-2xl md:text-3xl font-bold tracking-tighter bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+          <span className="text-2xl md:text-3xl font-bold tracking-tighter bg-gradient-to-r from-brand-400 to-brand-300 bg-clip-text text-transparent">
             Usman
           </span>
         </div>
@@ -53,10 +53,10 @@ const Header = () => {
             <li key={item.name}>
               <a
                 href={item.href}
-                className="hover:text-violet-400 transition-all duration-200 relative py-1 group"
+                className="hover:text-brand-400 transition-all duration-200 relative py-1 group"
               >
                 {item.name}
-                <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-violet-500 rounded-full transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-brand-500 rounded-full transition-all duration-300 group-hover:w-full"></span>
               </a>
             </li>
           ))}
@@ -64,7 +64,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-zinc-200 hover:text-violet-400 transition-colors focus:outline-none"
+          className="md:hidden text-zinc-200 hover:text-brand-400 transition-colors focus:outline-none"
           onClick={toggleMenu}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMenuOpen}
@@ -92,14 +92,14 @@ const Header = () => {
           <div className="flex justify-between items-center p-6 border-b border-zinc-700 bg-zinc-900">
             <div className="flex items-center gap-1">
               <span className="text-xl font-bold text-white">Faria</span>
-              <span className="text-xl font-bold bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-gradient-to-r from-brand-400 to-brand-300 bg-clip-text text-transparent">
                 Usman
               </span>
             </div>
 
             <button
               onClick={toggleMenu}
-              className="text-zinc-400 hover:text-violet-400 transition-colors p-2 hover:bg-zinc-800 rounded-xl"
+              className="text-zinc-400 hover:text-brand-400 transition-colors p-2 hover:bg-zinc-800 rounded-xl"
               aria-label="Close menu"
             >
               <AiOutlineClose size={28} />
@@ -113,7 +113,7 @@ const Header = () => {
                 <a
                   href={item.href}
                   onClick={toggleMenu}
-                  className="block py-4 px-6 rounded-2xl hover:bg-zinc-800 hover:text-violet-400 transition-all duration-200 font-medium"
+                  className="block py-4 px-6 rounded-2xl hover:bg-zinc-800 hover:text-brand-400 transition-all duration-200 font-medium"
                 >
                   {item.name}
                 </a>
@@ -130,7 +130,7 @@ const Header = () => {
                 href="https://www.linkedin.com/in/faria-usman-856415309"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-300 hover:text-violet-400 transition-all p-4 hover:bg-zinc-800 rounded-2xl"
+                className="text-zinc-300 hover:text-brand-400 transition-all p-4 hover:bg-zinc-800 rounded-2xl"
                 aria-label="LinkedIn"
               >
                 <FaLinkedin size={24} />
@@ -139,7 +139,7 @@ const Header = () => {
                 href="https://github.com/fariau"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-zinc-300 hover:text-violet-400 transition-all p-4 hover:bg-zinc-800 rounded-2xl"
+                className="text-zinc-300 hover:text-brand-400 transition-all p-4 hover:bg-zinc-800 rounded-2xl"
                 aria-label="GitHub"
               >
                 <FaGithub size={24} />
@@ -153,11 +153,11 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full group inline-flex items-center justify-center gap-3 py-3.5 px-6 
-                           bg-gradient-to-r from-violet-600 to-fuchsia-600 
-                           hover:from-violet-500 hover:to-fuchsia-500 
-                           active:from-violet-700 active:to-fuchsia-700
+                           bg-gradient-to-r from-brand-500 to-brand-700 
+                           hover:from-brand-500 hover:to-brand-600 
+                           active:from-brand-700 active:to-brand-800
                            text-white font-medium rounded-2xl transition-all duration-300 
-                           shadow-md hover:shadow-violet-500/40 border border-violet-400/20"
+                           shadow-md hover:shadow-brand-500/40 border border-brand-400/20"
               >
                 See My Resume
                 <span className="transition-transform group-hover:translate-x-1">↓</span>
